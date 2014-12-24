@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  UinProto
+//  supertest
 //
-//  Created by Kareem Dasilva on 12/17/14.
+//  Created by Kareem Dasilva on 12/23/14.
 //  Copyright (c) 2014 Kareem Dasilva. All rights reserved.
 //
 
@@ -15,8 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        Parse.setApplicationId("2FO7MjJC9k1kB5VyEQakMQFNw6QQ8YreXFPe4Sl2", clientKey: "5HfjThALrUtxznMMC0R1UtmlmRxb2XaBdy5QN47N")
         // Override point for customization after application launch.
         return true
     }

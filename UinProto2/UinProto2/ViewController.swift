@@ -1,14 +1,14 @@
 //
-//  FirstViewController.swift
-//  UinProto
+//  ViewController.swift
+//  UinProto2
 //
-//  Created by Kareem Dasilva on 12/17/14.
+//  Created by Kareem Dasilva on 12/24/14.
 //  Copyright (c) 2014 Kareem Dasilva. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

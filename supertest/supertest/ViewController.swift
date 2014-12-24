@@ -1,14 +1,14 @@
 //
-//  SecondViewController.swift
-//  UinProto
+//  ViewController.swift
+//  supertest
 //
-//  Created by Kareem Dasilva on 12/17/14.
+//  Created by Kareem Dasilva on 12/23/14.
 //  Copyright (c) 2014 Kareem Dasilva. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

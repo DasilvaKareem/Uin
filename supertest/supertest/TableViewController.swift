@@ -1,29 +1,23 @@
 //
-//  Nav.swift
-//  signin
+//  TableViewController.swift
+//  supertest
 //
-//  Created by Kareem Dasilva on 12/20/14.
+//  Created by Kareem Dasilva on 12/23/14.
 //  Copyright (c) 2014 Kareem Dasilva. All rights reserved.
-//SUPER ROUGH DRAFT 
-
-
+//
 
 import UIKit
 
-class Nav: UITableViewController {
-    
-    // Sample text from Users
+class TableViewController: UITableViewController {
+
     var info = ["bah", "fdsfdsf", "sadfdasfd","adsadsa"]
     
     var users = ["Kareem","dude1","dude2","dude3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-
-        
-        
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,29 +25,34 @@ class Nav: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Table view data source
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
         return 1
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Returns the amount of users post
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
         return users.count
+        
     }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Puts the data in a cell
-        var cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "cell")
-        var cell2 = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: "cell")
+        var sup = "cell"
+        var cell1:navcell = self.tableView.dequeueReusableCellWithIdentifier("cell") as navcell
         
-        cell.textLabel?.text = users[indexPath.row]
         
-        cell.detailTextLabel?.text = info[indexPath.row]
-        return cell
+      
+            cell1.textpost.text = info[indexPath.row]
         
+        
+        
+        return cell1
         
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-     
-           }
-    
-    
 }
