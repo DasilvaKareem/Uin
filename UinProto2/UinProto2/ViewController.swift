@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textpost: UITextField!
     
+    @IBOutlet weak var would: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func submit(sender: AnyObject) {
-        
+        if textpost.text != "" {
         var status = PFObject(className: "post")
         status["username"] = PFUser.currentUser().username
         status["stuff"] = textpost.text
@@ -39,8 +40,12 @@ class ViewController: UIViewController {
                 println("error")
             }
             
+            }
         }
-        
+        else {
+            would.text = "Please enter something"
+            
+        }
     }
     
     

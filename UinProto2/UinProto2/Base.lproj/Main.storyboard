@@ -119,16 +119,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Feed" id="K8F-Hd-3f4">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Q8J-Us-XdU">
+                            <connections>
+                                <action selector="logout:" destination="rxy-QO-GeQ" id="u4k-6D-Fkr"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="w3A-9n-EU2">
                             <connections>
                                 <segue destination="Heh-HJ-Xza" kind="presentation" id="vpo-MC-9FZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="6lS-Ca-3sI" kind="presentation" identifier="logout" id="LBf-vR-9iD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLR-qP-97T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779" y="1080"/>
+            <point key="canvasLocation" x="859" y="1080"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mg5-WV-OWK">
@@ -142,12 +150,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Would you kindly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wp4-vt-pFv">
-                                <rect key="frame" x="95" y="56" width="131" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujb-gx-Fkl">
                                 <rect key="frame" x="107" y="205" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -168,12 +170,19 @@
                                     <action selector="submit:" destination="Heh-HJ-Xza" eventType="touchUpInside" id="a98-OV-8Dx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Would you kindly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wp4-vt-pFv">
+                                <rect key="frame" x="95" y="47" width="169" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="textpost" destination="cBo-yC-SGn" id="CYW-ry-Cnk"/>
+                        <outlet property="would" destination="Wp4-vt-pFv" id="JRb-bL-aZH"/>
                         <segue destination="rxy-QO-GeQ" kind="presentation" identifier="back" id="psA-E8-kxJ"/>
                     </connections>
                 </viewController>
@@ -268,6 +277,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="p1m-lj-asw"/>
-        <segue reference="psA-E8-kxJ"/>
+        <segue reference="VNE-Hr-NDg"/>
+        <segue reference="LBf-vR-9iD"/>
     </inferredMetricsTieBreakers>
 </document>

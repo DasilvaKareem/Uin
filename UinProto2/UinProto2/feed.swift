@@ -13,9 +13,21 @@ class feed: UITableViewController {
     var posted = [String]()
     var users = [String]()
     
+    var refresher: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+           updateusers()
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Bruh let me refresh")
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refresher)
+     
+        
+    }
+    
+    func updateusers() {
         var que = PFQuery(className: "post")
         que.findObjectsInBackgroundWithBlock{
             (objects:[AnyObject]!, queError:NSError!) -> Void in
@@ -35,13 +47,29 @@ class feed: UITableViewController {
                 
                 println("error")
             }
+            self.refresher.endRefreshing()
             
         }
         
         
         
     }
+    func refresh() {
+        
     
+        
+        updateusers()
+        
+    }
+    
+    
+    @IBAction func logout(sender: AnyObject) {
+        PFUser.logOut()
+        self.performSegueWithIdentifier("logout", sender: "self")
+        
+    }
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
