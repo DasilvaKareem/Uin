@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+             // Do any additional setup after loading the view.
     }
 
     
@@ -27,7 +26,20 @@ class ViewController: UIViewController {
         var status = PFObject(className: "post")
         status["username"] = PFUser.currentUser().username
         status["stuff"] = textpost.text
-        status.saveInBackground()
+        status.saveInBackgroundWithBlock {
+            (succeeded:Bool! , postError:NSError!) -> Void in
+            
+            if postError == nil {
+                println("success")
+                self.performSegueWithIdentifier("back", sender: self)
+            }
+                
+            else {
+                
+                println("error")
+            }
+            
+        }
         
     }
     

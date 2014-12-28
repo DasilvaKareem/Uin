@@ -10,12 +10,12 @@ import UIKit
 
 class feed: UITableViewController {
     var info = ["bah", "fdsfdsf", "sadfdasfd","adsadsa"]
-    var post = [String]()
+    var posted = [String]()
     var users = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         var que = PFQuery(className: "post")
         que.findObjectsInBackgroundWithBlock{
             (objects:[AnyObject]!, queError:NSError!) -> Void in
@@ -26,8 +26,9 @@ class feed: UITableViewController {
                 for object in objects {
                     println(object.objectId)
                     self.users.append(object["username"] as String)
-                    self.post.append(object["stuff"] as String)
+                    self.posted.append(object["stuff"] as String)
                     self.tableView.reloadData()
+                    
                 }
             }
             else {
@@ -71,7 +72,7 @@ class feed: UITableViewController {
         
         cell1.user.text = users[indexPath.row]
         
-        cell1.posts.text = post[indexPath.row]
+        cell1.posts.text = posted[indexPath.row]
         
       
         return cell1

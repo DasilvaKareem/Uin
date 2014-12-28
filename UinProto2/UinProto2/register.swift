@@ -53,7 +53,7 @@ class register: UIViewController {
                 
                 if registerError == nil {
                     
-                    println("register")
+                    self.performSegueWithIdentifier("jump", sender: self)
                     
                 }
                 
@@ -62,6 +62,12 @@ class register: UIViewController {
         }
         
     }
+    
+    @IBAction func login(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("login", sender: self)
+    }
+    
     
 
     
