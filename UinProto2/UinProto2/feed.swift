@@ -1,15 +1,14 @@
 //
-//  TableViewController.swift
-//  supertest
+//  feed.swift
+//  UinProto2
 //
-//  Created by Kareem Dasilva on 12/23/14.
+//  Created by Kareem Dasilva on 12/27/14.
 //  Copyright (c) 2014 Kareem Dasilva. All rights reserved.
 //
 
 import UIKit
 
-class TableViewController: UITableViewController {
-
+class feed: UITableViewController {
     var info = ["bah", "fdsfdsf", "sadfdasfd","adsadsa"]
     
     var users = ["Kareem","dude1","dude2","dude3"]
@@ -17,7 +16,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,17 +40,16 @@ class TableViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         // Puts the data in a cell
-        var sup = "cell"
-        var cell1:navcell = self.tableView.dequeueReusableCellWithIdentifier("cell") as navcell
         
+        var cell1:customcell = self.tableView.dequeueReusableCellWithIdentifier("cell") as customcell
+        
+        
+        
+        cell1.textLabel?.text = info[indexPath.row]
         
       
-            cell1.textpost.text = info[indexPath.row]
-        
-        
-        
         return cell1
         
     }
