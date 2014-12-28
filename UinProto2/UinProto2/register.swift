@@ -19,6 +19,7 @@ class register: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     
+
     
     
     override func viewDidLoad() {

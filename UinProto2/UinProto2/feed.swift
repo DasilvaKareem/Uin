@@ -10,11 +10,33 @@ import UIKit
 
 class feed: UITableViewController {
     var info = ["bah", "fdsfdsf", "sadfdasfd","adsadsa"]
-    
-    var users = ["Kareem","dude1","dude2","dude3"]
+    var post = [String]()
+    var users = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var que = PFQuery(className: "post")
+        que.findObjectsInBackgroundWithBlock{
+            (objects:[AnyObject]!, queError:NSError!) -> Void in
+            if queError == nil {
+                
+                println(objects.count)
+                
+                for object in objects {
+                    println(object.objectId)
+                    self.users.append(object["username"] as String)
+                    self.post.append(object["stuff"] as String)
+                    self.tableView.reloadData()
+                }
+            }
+            else {
+                
+                println("error")
+            }
+            
+        }
+        
         
         
     }
@@ -47,7 +69,9 @@ class feed: UITableViewController {
         
         
         
-        cell1.textLabel?.text = info[indexPath.row]
+        cell1.user.text = users[indexPath.row]
+        
+        cell1.posts.text = post[indexPath.row]
         
       
         return cell1

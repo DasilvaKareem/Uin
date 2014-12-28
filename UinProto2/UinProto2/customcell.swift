@@ -11,11 +11,10 @@ import UIKit
 class customcell: UITableViewCell {
 
     
-    @IBOutlet weak var nigga: UILabel!
+    @IBOutlet weak var user: UILabel!
     
     
-    @IBOutlet weak var other: UILabel!
-    
+    @IBOutlet weak var posts: UILabel!
     
     
     override func awakeFromNib() {
