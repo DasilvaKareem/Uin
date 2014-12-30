@@ -12,6 +12,8 @@ class feed: UITableViewController {
     var info = ["bah", "fdsfdsf", "sadfdasfd","adsadsa"]
     var posted = [String]()
     var users = [String]()
+    var date = [NSDate]()
+   
     
     var refresher: UIRefreshControl!
     
@@ -29,6 +31,7 @@ class feed: UITableViewController {
     
     func updateusers() {
         var que = PFQuery(className: "post")
+        que.orderByDescending("createdAt")
         que.findObjectsInBackgroundWithBlock{
             (objects:[AnyObject]!, queError:NSError!) -> Void in
             if queError == nil {
@@ -37,6 +40,7 @@ class feed: UITableViewController {
                 
                 for object in objects {
                     println(object.objectId)
+                    
                     self.users.append(object["username"] as String)
                     self.posted.append(object["stuff"] as String)
                     self.tableView.reloadData()
@@ -96,7 +100,7 @@ class feed: UITableViewController {
         
         var cell1:customcell = self.tableView.dequeueReusableCellWithIdentifier("cell") as customcell
         
-        
+        println(date)
         
         cell1.user.text = users[indexPath.row]
         

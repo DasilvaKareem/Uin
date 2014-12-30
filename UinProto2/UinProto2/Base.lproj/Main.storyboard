@@ -76,13 +76,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKr-ks-AU4">
-                                            <rect key="frame" x="62" y="9" width="151" height="21"/>
+                                            <rect key="frame" x="90" y="9" width="108" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-rg-fY0">
-                                            <rect key="frame" x="62" y="37" width="236" height="47"/>
+                                            <rect key="frame" x="90" y="37" width="236" height="47"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -105,9 +105,19 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PwO-W3-L3g">
+                                            <rect key="frame" x="8" y="8" width="72" height="57"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdi-Gp-oMc">
+                                            <rect key="frame" x="231" y="9" width="81" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="date" destination="Gdi-Gp-oMc" id="w6K-oI-IhG"/>
                                     <outlet property="posts" destination="mAy-rg-fY0" id="hSN-oK-waF"/>
                                     <outlet property="user" destination="eKr-ks-AU4" id="D2J-rf-lTu"/>
                                 </connections>
@@ -136,7 +146,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLR-qP-97T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="1080"/>
+            <point key="canvasLocation" x="756" y="1077"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mg5-WV-OWK">
@@ -183,7 +193,7 @@
                     <connections>
                         <outlet property="textpost" destination="cBo-yC-SGn" id="CYW-ry-Cnk"/>
                         <outlet property="would" destination="Wp4-vt-pFv" id="JRb-bL-aZH"/>
-                        <segue destination="rxy-QO-GeQ" kind="presentation" identifier="back" id="psA-E8-kxJ"/>
+                        <segue destination="Gtd-pT-EnZ" kind="show" identifier="back" id="TI9-nj-xRp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6c-5d-eDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,8 +286,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="p1m-lj-asw"/>
-        <segue reference="VNE-Hr-NDg"/>
+        <segue reference="TI9-nj-xRp"/>
         <segue reference="LBf-vR-9iD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,6 +16,7 @@ class customcell: UITableViewCell {
     
     @IBOutlet weak var posts: UILabel!
     
+    @IBOutlet weak var date: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
