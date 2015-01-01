@@ -12,8 +12,10 @@ class feed: UITableViewController {
     var info = ["bah", "fdsfdsf", "sadfdasfd","adsadsa"]
     var posted = [String]()
     var users = [String]()
-    var date = [NSDate]()
-   
+    var vdate = [String]()
+    
+
+    
     
     var refresher: UIRefreshControl!
     
@@ -40,7 +42,11 @@ class feed: UITableViewController {
                 
                 for object in objects {
                     println(object.objectId)
-                    
+                    println(object.createdAt)
+                    var formatter: NSDateFormatter = NSDateFormatter()
+                    formatter.dateFormat = "MM-dd-yyyy"
+                    var stringdate: String = formatter.stringFromDate(object.createdAt)
+                    self.vdate.append(stringdate as NSString)
                     self.users.append(object["username"] as String)
                     self.posted.append(object["stuff"] as String)
                     self.tableView.reloadData()
@@ -100,7 +106,7 @@ class feed: UITableViewController {
         
         var cell1:customcell = self.tableView.dequeueReusableCellWithIdentifier("cell") as customcell
         
-        println(date)
+        cell1.date.text = vdate[indexPath.row]
         
         cell1.user.text = users[indexPath.row]
         
