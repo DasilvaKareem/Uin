@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+    var nextview = ""
 class feed: UITableViewController {
     var info = ["bah", "fdsfdsf", "sadfdasfd","adsadsa"]
     var posted = [String]()
@@ -44,7 +44,7 @@ class feed: UITableViewController {
                     println(object.objectId)
                     println(object.createdAt)
                     var formatter: NSDateFormatter = NSDateFormatter()
-                    formatter.dateFormat = "MM-dd-yyyy"
+                    formatter.dateFormat = "MM-dd"
                     var stringdate: String = formatter.stringFromDate(object.createdAt)
                     self.vdate.append(stringdate as NSString)
                     self.users.append(object["username"] as String)
@@ -69,6 +69,24 @@ class feed: UITableViewController {
     
         
         updateusers()
+        
+    }
+    
+    
+    @IBAction func likeStatus(sender: AnyObject) {
+        
+        
+    }
+    
+    
+    @IBAction func Dislike(sender: AnyObject) {
+        
+        
+    }
+    
+    
+    @IBAction func Comment(sender: AnyObject) {
+        
         
     }
     
@@ -116,4 +134,29 @@ class feed: UITableViewController {
         return cell1
         
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        
+        
+        
+        self.performSegueWithIdentifier("sideview", sender: self)
+        
+      
+
+
+        
+        
+    }
+
+
+
+
+
+
+
+
+
+
 }

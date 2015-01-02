@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBAction func submit(sender: AnyObject) {
         if textpost.text != "" {
         var status = PFObject(className: "post")
+        status["ratio"] = 0
         status["username"] = PFUser.currentUser().username
         status["stuff"] = textpost.text
         status.saveInBackgroundWithBlock {
