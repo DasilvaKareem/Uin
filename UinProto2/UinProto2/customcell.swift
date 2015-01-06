@@ -14,11 +14,8 @@ class customcell: UITableViewCell {
     @IBOutlet weak var user: UILabel!
     
     
-    @IBOutlet weak var like: UILabel!
-    
-    @IBOutlet weak var dislike: UILabel!
-    
-    @IBOutlet weak var comment: UILabel!
+
+    @IBOutlet weak var profilepic: UIImageView!
     
     
     @IBOutlet weak var posts: UILabel!

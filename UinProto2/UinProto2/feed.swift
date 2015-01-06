@@ -9,12 +9,13 @@
 import UIKit
     var nextview = ""
 class feed: UITableViewController {
-    var info = ["bah", "fdsfdsf", "sadfdasfd","adsadsa"]
+    
     var posted = [String]()
     var users = [String]()
     var vdate = [String]()
-    
-
+    var images = [PFFile]()
+    var imaged = [UIImage]()
+  
     
     
     var refresher: UIRefreshControl!
@@ -47,20 +48,22 @@ class feed: UITableViewController {
                     formatter.dateFormat = "MM-dd"
                     var stringdate: String = formatter.stringFromDate(object.createdAt)
                     self.vdate.append(stringdate as NSString)
+                    self.images.append(object["profile"] as PFFile)
                     self.users.append(object["username"] as String)
                     self.posted.append(object["stuff"] as String)
                     self.tableView.reloadData()
                     
                 }
+                  self.refresher.endRefreshing()
             }
             else {
                 
                 println("error")
             }
-            self.refresher.endRefreshing()
+          
             
         }
-        
+   
         
         
     }
@@ -74,6 +77,7 @@ class feed: UITableViewController {
     
     
     @IBAction func likeStatus(sender: AnyObject) {
+        
         
         
     }
@@ -124,11 +128,30 @@ class feed: UITableViewController {
         
         var cell1:customcell = self.tableView.dequeueReusableCellWithIdentifier("cell") as customcell
         
+   
+        
+         //cell1.dislike.text = Dislike[indexPath.row]
+        
+         //cell1.comment.text = Comment[indexPath.row]
+        
         cell1.date.text = vdate[indexPath.row]
         
         cell1.user.text = users[indexPath.row]
         
         cell1.posts.text = posted[indexPath.row]
+        
+        images[indexPath.row].getDataInBackgroundWithBlock
+            {
+                (imageData: NSData!, supererror: NSError!) -> Void in
+               
+                if supererror == nil {
+                    
+                    let image = UIImage(data: imageData)
+                    
+                    cell1.profilepic.image = image
+                }
+                
+        }
         
       
         return cell1
