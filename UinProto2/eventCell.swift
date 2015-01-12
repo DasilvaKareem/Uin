@@ -12,6 +12,14 @@ class eventCell: UITableViewCell {
 
     @IBOutlet weak var eventName: UILabel!
     
+   
+    @IBOutlet weak var location: UIImageView!
+ 
+    
+    @IBOutlet weak var food: UIImageView!
+    
+    
+    @IBOutlet weak var paid: UIImageView!
     
     @IBOutlet weak var people: UILabel!
     
