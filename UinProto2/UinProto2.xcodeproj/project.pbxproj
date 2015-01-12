@@ -75,18 +75,18 @@
 		28277E6C1A4B161B001CCB02 /* UinProto2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UinProto2-Bridging-Header.h"; sourceTree = "<group>"; };
 		28277E6D1A4B161C001CCB02 /* UInProto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UInProto.m; sourceTree = "<group>"; };
 		28277E6F1A4B1685001CCB02 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		28277E711A4B1769001CCB02 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../Downloads/parse-library-1.6.0 2/Bolts.framework"; sourceTree = "<group>"; };
+		28277E711A4B1769001CCB02 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		28277E751A4B1804001CCB02 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		28277E771A4B1D0E001CCB02 /* register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = register.swift; sourceTree = "<group>"; };
 		28E653F41A5607CA006E76E5 /* sideview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideview.swift; sourceTree = "<group>"; };
 		28E653F61A5B73ED006E76E5 /* profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
-		28E654791A60B007006E76E5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../Downloads/parse-library-1.6.1/Parse.framework"; sourceTree = "<group>"; };
+		28E654791A60B007006E76E5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = UinProto2/Parse.framework; sourceTree = "<group>"; };
 		28E6547D1A60B9C8006E76E5 /* eventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventCell.swift; sourceTree = "<group>"; };
 		28E6547F1A60B9FC006E76E5 /* eventFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventFeedViewController.swift; sourceTree = "<group>"; };
 		28E654811A60C1AD006E76E5 /* eventMake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventMake.swift; sourceTree = "<group>"; };
-		28E654831A63C2B5006E76E5 /* on-campus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "on-campus.png"; path = "../../../../../Downloads/on-campus.png"; sourceTree = "<group>"; };
-		28E654841A63C2B5006E76E5 /* free.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = free.png; path = ../../../../../Downloads/free.png; sourceTree = "<group>"; };
-		28E654871A63C2DA006E76E5 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food.png; path = ../../../../../Downloads/food.png; sourceTree = "<group>"; };
+		28E654831A63C2B5006E76E5 /* on-campus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "on-campus.png"; sourceTree = "<group>"; };
+		28E654841A63C2B5006E76E5 /* free.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = free.png; sourceTree = "<group>"; };
+		28E654871A63C2DA006E76E5 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		28F8364A1A4FB25D00F45A0B /* customcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customcell.swift; sourceTree = "<group>"; };
 		28F8364C1A4FB3E400F45A0B /* feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
